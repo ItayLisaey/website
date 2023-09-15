@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import ShowcaseCard from '../../components/ShowcaseCard.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const demos = await getCollection('demos').then((data) => data.reverse());
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <header class='my-2'>
+        <a href='/'>← Back</a>
+      </header>
+      <h2 class='font-bold m-0'>Demos</h2>
+      <p class='text-slate-500'>
+        Demonstrating technologies and concept to my team
+      </p>
+      <ul class='py-2 flex flex-col gap-4'>
+        {
+          demos.map((demo) => (
+            <ShowcaseCard
+              path='demos'
+              slug={demo.slug}
+              title={demo.data.title}
+              emoji={demo.data.emoji}
+              description={demo.data.description}
+              status={demo.data.status}
+            />
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>
