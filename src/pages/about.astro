@@ -1,0 +1,126 @@
+---
+import { Image } from 'astro:assets';
+import profilePicture from '../assets/Itay Lisaey Profile Cropped.jpg';
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout
+  title='About Me'
+  description='Lorem ipsum dolor sit amet'
+  addtionalClass='flex flex-col justify-start gap-6'
+>
+  <header title='header' class='flex items-center space-x-4'>
+    <Image
+      class='font-bold text-sm rounded-xl max-w-[10rem]'
+      src={profilePicture}
+      alt='Itay Lisaey Profile'
+    />
+    <section class='flex flex-col justify-start h-full'>
+      <h1 class='font-bold text-xl'>Itay Lisaey</h1>
+      <p>Web Developer & Team Leader</p>
+      <span>🌐 Israel</span>
+    </section>
+  </header>
+  <section title='summary'>
+    <!-- <h2 class='text-xl font-bold'>Summary</h2> -->
+    <p>
+      I'm Itay, a developer and a software team lead based in Israel. With a
+      passion for both backend and frontend development, I've cultivated a
+      strong skill set in React, Typescript, NodeJS, CSS, DevOps, CI/CD and
+      Azure Cloud.
+      <br />
+       Beyond technical expertise, I truly believe in maintaining integrity,
+      honesty and professionalism in all aspects of work and life.
+      <br />
+       Currently, my focus extends to data engineering and system design, where
+      I continue to grow and adapt to the ever-evolving landscape of software
+      development.
+    </p>
+  </section>
+  <section title='skills'>
+    <h2 class='text-xl font-bold'>Skills</h2>
+    <p>
+      React, JavaScript, Typescript, Azure Cloud, Node.JS, Docker, MongoDB, Go,
+      DevOps, CI/CD, GCP, Project Management, UI/UX Design, Motion Graphics,
+      Vector Illustrations.
+    </p>
+  </section>
+  <section title='experience' class='flex flex-col gap-4'>
+    <h2 class='text-xl font-bold'>Experience</h2>
+    <ul role='list'>
+      <li class='exprience'>
+        <h3 class='text-xl'>Software Team Lead</h3>
+        <h4>Israel Defense Forces (Intelligence Corps/Home Front Command)</h4>
+        <h5 class='text-slate-500'>December 2022 - December 2023</h5>
+        <p></p>
+      </li>
+      <li class='exprience'>
+        <h3 class='text-xl'>Web Developer</h3>
+        <h4>Israel Defense Forces (Intelligence Corps/Home Front Command)</h4>
+        <h5 class='text-slate-500'>April 2021 - December 2022</h5>
+        <p></p>
+      </li>
+
+      <li class='exprience'>
+        <h3 class='text-xl'>Graphic Designer</h3>
+        <h4>Freelancer & Part time</h4>
+        <h5 class='text-slate-500'>June 2019 - April 2021</h5>
+        <p>
+          <ul class='marker:text-slate-700 list-disc pl-4'>
+            <li>
+              Developed the production design and overall layout for
+              advertisements, banners, products, brochures, and more.
+            </li>
+            <li>
+              Designed graphics to meet specific promotional and commercial
+              needs.
+            </li>
+            <li>
+              Developed visually captivating logos, effectively representing
+              brand identities.
+            </li>
+            <li>
+              Created dynamic animated videos to convey complex concepts in an
+              engaging and easily understandable manner.
+            </li>
+            <li>
+              Worked with Adobe Illustrator, Adobe After Effects, and Photoshop
+              to craft visual design assets.
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <style>
+    li {
+      margin: 0;
+    }
+
+    li.exprience {
+      padding-bottom: 1.5rem;
+      border-left: 1px solid #cbd5e1;
+      position: relative;
+      padding-left: 20px;
+      margin-left: 10px;
+    }
+
+    li.exprience:last-child {
+      border: 0px;
+      padding-bottom: 0;
+    }
+
+    li.exprience:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #334155;
+      border: 3px solid #334155;
+      border-radius: 50%;
+      position: absolute;
+      left: -4px;
+      top: 0px;
+    }
+  </style>
+</Layout>

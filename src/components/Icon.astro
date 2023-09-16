@@ -1,0 +1,27 @@
+---
+import GithubIcon from '../assets/icons/github.svg?raw';
+import InstagramIcon from '../assets/icons/instagram.svg?raw';
+import LinkedinIcon from '../assets/icons/linkedin.svg?raw';
+import MailIcon from '../assets/icons/mail.svg?raw';
+import PhoneIcon from '../assets/icons/phone-outgoing.svg?raw';
+
+type Props = {
+  name: string;
+};
+
+const { name } = Astro.props;
+
+const icons = {
+  linkedin: LinkedinIcon,
+  github: GithubIcon,
+  instagram: InstagramIcon,
+  phone: PhoneIcon,
+  mail: MailIcon,
+};
+
+const svg = icons[name as keyof typeof icons];
+---
+
+<span class='bg-black'>
+  <Fragment set:html={svg} />
+</span>

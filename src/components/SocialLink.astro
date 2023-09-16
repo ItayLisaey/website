@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+
+type Props = {
+  alt: string;
+  icon: string;
+  link: string;
+};
+
+const { alt, icon, link } = Astro.props;
+---
+
+<a
+  class='bg-sky-500 hover:bg-sky-700 w-2 h-2'
+  aria-label={alt}
+  title={alt}
+  href={link}
+  target='__blank'
+>
+  <Icon name={icon} />
+</a>
