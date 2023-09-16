@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
 import ShowcaseCard from '../../components/ShowcaseCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
@@ -13,14 +14,16 @@ const demos = await getCollection('demos').then((data) => data.reverse());
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <Header />
     <main>
-      <header class='my-2'>
-        <a href='/'>← Back</a>
-      </header>
       <h2 class='font-bold m-0'>Demos</h2>
-      <p class='text-slate-500'>
-        Demonstrating technologies and concept to my team
+      <p class='text-slate-500 text-[1rem]'>
+        I genuinely believe that by sharing practical examples and experiences,
+        I can contribute to the growth and development of my teammates and
+        inspire collaborative improvement. Here's an example of a couple of
+        demos I provided for my team.
       </p>
+      <br />
       <ul class='py-2 flex flex-col gap-4'>
         {
           demos.map((demo) => (

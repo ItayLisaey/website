@@ -2,17 +2,31 @@
 title: 'OpenQR'
 emoji: '📸'
 status: 'Done'
-description: 'Demonstring real world usage of the state machine concept in React, using XState.'
+description: 'Demonstrating State Machines and Progressive Web Apps through the use-case of an offline QR code scanner.'
+url: 'https://github.com/ItayLisaey/open-qr'
 pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: 'https://github.com/ItayLisaey/open-qr/raw/main/public/open-qr-cover-repo.png?raw=true'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+This small demo was born after I was in [ReactNext 2022](https://www.react-next.com/), a React confrence in Tel Aviv.
+David Khourshid, the founder of [Stately](https://stately.ai/) gave an amazing talk about the value and benefit of using state machines. In the same day I stayed late out of a desire to showcase to my team the ease with which new technologies or libraries can be explored, implemented in small-scale demos, given engaging names, and subsequently open-sourced.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## Background
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+OpenQR was conceived to serve as an educational tool, illustrating the implementation of state machines using XState and Stately for streamlined state management.
+<br/>
+The project's primary aim was to demonstrate to my team how state machines can simplify complex user interface behaviors while maintaining a user-friendly and secure environment.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+## Key Features
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+1. **Offline Capability**: OpenQR is designed as a Progressive Web App (PWA), ensuring full functionality even in offline scenarios. This underscores the adaptability and accessibility of the application, a key aspect of modern web development.
+
+2. **Safety and Security**: Prioritizing user safety and privacy, OpenQR processes QR codes directly on the user's device, preventing automatic opening of links. This approach empowers users with control and ensures their privacy.
+
+3. **User-Friendly Design**: OpenQR boasts an intuitive, icon-only based user interface that minimizes reliance on textual elements. This design choice promotes ease of use and navigation, breaking down language barriers.
+
+### Technologies Used
+
+- Built with [Next.js](https://nextjs.org/) and deployed with [Vercel](https://vercel.com).
+- Using [Nimiq's QR Scanner](https://github.com/nimiq/qr-scanner)
+- [XState](https://xstate.js.org/) and [Stately](https://stately.ai/) for state management.

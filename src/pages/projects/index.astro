@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
 import ShowcaseCard from '../../components/ShowcaseCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
@@ -13,10 +14,8 @@ const projects = await getCollection('projects').then((data) => data.reverse());
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <Header />
     <main>
-      <header class='my-2'>
-        <a href='/'>← Back</a>
-      </header>
       <h2 class='font-bold m-0'>Side Projects</h2>
       <p class='text-slate-500'>Problem solving using software</p>
       <ul class='py-2 flex flex-col gap-4'>

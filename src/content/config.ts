@@ -12,32 +12,26 @@ const blog = defineCollection({
   }),
 });
 
+const projectSchema = z.object({
+  title: z.string(),
+  emoji: z.string(),
+  status: z.enum(['Done', 'WIP', 'Not Started']),
+  description: z.string(),
+  url: z.string().url().optional(),
+  // Transform string to Date object
+  pubDate: z.coerce.date(),
+  updatedDate: z.coerce.date().optional(),
+  heroImage: z.string().optional(),
+});
+
 const projects = defineCollection({
   // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
-    emoji: z.string(),
-    status: z.enum(['Done', 'WIP', 'Not Started']),
-    description: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-  }),
+  schema: projectSchema,
 });
 
 const demos = defineCollection({
   // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
-    emoji: z.string(),
-    status: z.enum(['Done', 'WIP', 'Not Started']),
-    description: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-  }),
+  schema: projectSchema,
 });
 
 export const collections = { blog, projects, demos };

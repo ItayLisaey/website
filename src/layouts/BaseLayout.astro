@@ -1,0 +1,24 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+
+type Props = {
+  title: string;
+  description: string;
+  addtionalClass?: string;
+};
+
+const { title, description, addtionalClass } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main class:list={['flex flex-col text-[1rem]', addtionalClass]}>
+      <slot />
+    </main>
+  </body>
+</html>

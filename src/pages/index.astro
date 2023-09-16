@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import profilePicture from '../assets/Itay Lisaey Profile Cropped.jpg';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import SocialLink from '../components/SocialLink.astro';
+import { SITE_DESCRIPTION, SITE_TITLE, SOCIAL_LINKS } from '../consts';
 ---
 
 <!doctype html>
@@ -12,48 +12,59 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
-    <main class='flex flex-col gap-4'>
+    <main class='flex flex-col gap-4 text-[1rem] py-12'>
       <header class='flex items-center space-x-4 mt-4'>
         <Image
-          class='font-bold text-sm rounded-full max-w-[5rem]'
+          class='font-bold text-sm rounded-full max-w-[6rem]'
           src={profilePicture}
           alt='Itay Lisaey Profile'
         />
         <section class='flex flex-col justify-start h-full'>
           <h1 class='font-bold text-xl'>Itay Lisaey</h1>
-          <p>Web Developer & Designer</p>
+          <p>Web Developer & Team Leader</p>
         </section>
       </header>
-      <p>
-        Experienced software developer with UI design capabilities and
-        management experience, proficient in backend and frontend development
-        with a strong grasp of cloud technologies.
+      <p title='brief about'>
+        Experienced software engineer with high design capabilities, well-versed
+        in both backend and frontend development, and proficient in the realm of
+        cloud technologies.
         <br />
         <a class='underline' href='about'>More about me →</a>
       </p>
-      <a
-        href='projects'
-        class='border rounded-lg p-4 flex justify-between items-center hover:scale-[1.02] active:scale-[.98] transition ease-in-out'
-      >
-        <section>
-          <h2 class='font-bold m-0'>Side Projects</h2>
-          <p class='text-slate-500'>Problem solving using software</p>
-        </section>
-        <span> →</span>
-      </a>
       <a
         href='demos'
         class='text-slate-700 border rounded-lg p-4 flex justify-between items-center hover:scale-[1.02] active:scale-[.98] transition ease-in-out'
       >
         <section>
-          <h2 class='font-bold m-0'>Demos</h2>
+          <h2 class='font-bold m-0'>🤖 Demos</h2>
           <p class='text-slate-500'>
-            Demonstrating technologies and concept to my team
+            Made for demonstrating technologies and concept to my team
           </p>
         </section>
         <span> →</span>
       </a>
+      <a
+        href='projects'
+        class='border rounded-lg p-4 flex justify-between items-center hover:scale-[1.02] active:scale-[.98] transition ease-in-out'
+      >
+        <section>
+          <h2 class='font-bold m-0'>💼 Projects</h2>
+          <p class='text-slate-500'>Problem solving using software</p>
+        </section>
+        <span> →</span>
+      </a>
+
+      <nav title='social bar'>
+        <ul class='flex justify-center gap-4 mt-8'>
+          {
+            SOCIAL_LINKS.map((s) => (
+              <li class='hover:scale-110 active:scale-95 transition ease-in-out'>
+                <SocialLink alt={s.alt} icon={s.icon} link={s.link} />
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
     </main>
   </body>
 </html>
