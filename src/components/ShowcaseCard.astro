@@ -18,19 +18,21 @@ const colorByStatus = {
 ---
 
 <li
-  class='text-[1rem] border rounded-md p-4 hover:scale-[1.02] active:scale-[.98] transition ease-in-out'
+  class='text-[1rem] border rounded-md hover:scale-[1.02] active:scale-[.98] transition ease-in-out'
 >
   <a
     href={path + '/' + slug}
-    class='flex justify-center gap-4 hover:text-inherit'
+    class='flex justify-center p-4 gap-4 hover:text-inherit'
   >
     <section class='flex flex-col gap-2 w-[100%]'>
       <header class='flex justify-between items-center'>
         <section class='flex justify-start items-center gap-2'>
           <span>{emoji}</span>
-          <h4 class="font-bold text-slate-800">{title}</h4>
+          <h4 class='font-bold text-slate-800'>{title}</h4>
         </section>
-        <span class={`text-sm px-2 py-1 rounded  border ${colorByStatus[status]}`}>
+        <span
+          class={`text-sm px-2 py-1 rounded  border ${colorByStatus[status]}`}
+        >
           {status}
         </span>
       </header>
