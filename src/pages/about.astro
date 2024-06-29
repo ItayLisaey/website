@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-import profilePicture from '../assets/Itay Lisaey Profile Cropped.jpg';
+import profilePicture from '../assets/Itay Lisaey Profile Cropped.png';
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
 <Layout
   title='About Me'
-  description='Itay Lisaey, a full stack developer and a team lead.'
+  description='Itay Lisaey, Software Engineer'
   addtionalClass='flex flex-col justify-start gap-6'
 >
   <header title='header' class='flex items-center space-x-4'>
@@ -17,31 +17,24 @@ import Layout from '../layouts/BaseLayout.astro';
     />
     <section class='flex flex-col justify-start h-full'>
       <h1 class='font-bold text-xl'>Itay Lisaey</h1>
-      <p>Web Developer & Team Lead</p>
+      <p>Software Engineer @ <a class="underline" href="chordio.com">Chordio</a></p>
       <span>🌐 Israel</span>
     </section>
   </header>
   <section title='summary'>
     <!-- <h2 class='text-xl font-bold'>Summary</h2> -->
     <p>
-      I'm Itay, a developer and a software team lead based in Israel. With a
-      passion for both backend and frontend development, I've cultivated a
-      strong skill set in React, Typescript, NodeJS, CSS, DevOps, CI/CD and
-      Azure Cloud.
+      I'm Itay, a software engineer based in Israel. 
       <br />
-       Beyond technical expertise, I truly believe in maintaining integrity,
-      honesty and professionalism in all aspects of work and life.
-      <br />
-       Currently, my focus extends to data engineering and system design, where
-      I continue to grow and adapt to the ever-evolving landscape of software
-      development.
+       Currently, working at <a class="underline" href="https://chordio.com">
+        Chordio</a>, developing an AI platform that enables product managers to iterate and prototype rapidly and effectively.
     </p>
   </section>
   <section title='skills'>
     <h2 class='text-xl font-bold'>Skills</h2>
     <p>
-      React, JavaScript, Typescript, Azure Cloud, Node.JS, Docker, MongoDB, Go,
-      DevOps, CI/CD, GCP, Project Management, UI/UX Design, Motion Graphics,
+      React, JavaScript, Typescript, Azure Cloud, Node.JS, Docker, Next.js, Postgres, MongoDB, Go,
+      DevOps, CI/CD, AWS, GCP, Project Management, UI/UX Design, Motion Graphics,
       Vector Illustrations.
     </p>
   </section>
@@ -49,16 +42,73 @@ import Layout from '../layouts/BaseLayout.astro';
     <h2 class='text-xl font-bold'>Experience</h2>
     <ul role='list'>
       <li class='exprience'>
+        <h3 class='text-xl'>Software Engineer</h3>
+        <h4>Chordio</h4>
+        <h5 class='text-slate-500'>May 2024 - Now</h5>
+        <p></p>
+      </li>
+      <li class='exprience'>
+        <h3 class='text-xl'>Software Architect</h3>
+        <h4>Israeli Ministry of Defense (Contract)</h4>
+        <h5 class='text-slate-500'>December 2023 - May 2024</h5>
+        <p>
+          <ul class='marker:text-slate-700 list-disc pl-4 py-4 flex flex-col gap-2'>
+            <li>
+              Solved complex client software issues using advanced Typescript and React state management libraries.
+            </li>
+            <li>
+              Implemented testing strategies and practices in the unit’s engineering teams.
+            </li>
+
+          </ul>
+        </p>
+      </li>
+      <li class='exprience'>
         <h3 class='text-xl'>Software Team Lead</h3>
         <h4>Israel Defense Forces (Intelligence Corps/Home Front Command)</h4>
         <h5 class='text-slate-500'>December 2022 - December 2023</h5>
-        <p></p>
+        <p>
+          <ul class='marker:text-slate-700 list-disc pl-4 py-4 flex flex-col gap-2'>
+            <li>
+              Directly and simultaneously led both full stack and data
+              engineering teams, totaling 20 professionals.
+            </li>
+            <li>
+              Designed and developed emergency and humanitarian web-based
+              systems for national and international crises.
+            </li>
+          </ul>
+
+
+        </p>
       </li>
       <li class='exprience'>
         <h3 class='text-xl'>Web Developer</h3>
         <h4>Israel Defense Forces (Intelligence Corps/Home Front Command)</h4>
         <h5 class='text-slate-500'>April 2021 - December 2022</h5>
-        <p></p>
+        <p>
+          <ul class='marker:text-slate-700 list-disc pl-4 py-4 flex flex-col gap-2'>
+            <li>
+              Developed vital systems and national crisis solutions using data
+              & web technologies like Node.js, React, MongoDB, and Azure Cloud.
+            </li>
+            <li>
+              Worked in a high-speed, changing environment utilizing public
+              cloud, microservices and serverless technologies to create
+              meaningful products.
+            </li>
+            <li>
+              Led the team’s DevOps operations, created and managed our team’s
+              CI/CD pipeline templates, IaC scripts and collaborated on our
+              Kubernetes implementation.
+            </li>
+            <li>
+              Led the user interface design efforts for all client-facing
+              systems within the team and resolved complex UX challenges.
+            </li>
+          </ul>
+         
+        </p>
       </li>
 
       <li class='exprience'>
@@ -66,7 +116,7 @@ import Layout from '../layouts/BaseLayout.astro';
         <h4>Freelancer & Part time</h4>
         <h5 class='text-slate-500'>June 2019 - April 2021</h5>
         <p>
-          <ul class='marker:text-slate-700 list-disc pl-4'>
+          <ul class='marker:text-slate-700 list-disc pl-4 py-4 flex flex-col gap-2'>
             <li>
               Developed the production design and overall layout for
               advertisements, banners, products, brochures, and more.
