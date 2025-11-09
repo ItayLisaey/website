@@ -35,7 +35,7 @@ export default function Home() {
           >
             Pragmatican
           </Link>
-          , previously worked generative AI systems at{" "}
+          , previously worked on generative AI systems at{" "}
           <Link
             href="https://chordio.com"
             target="_blank"
