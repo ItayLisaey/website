@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background flex items-start justify-start max-h-[95dvh]">
+    <div className="min-h-[95dvh] bg-background flex items-start justify-start">
       <main className="max-w-xl mx-auto px-6 py-32">
         {/* Avatar and Name */}
         <div className="flex items-center gap-4 mb-4">
