@@ -44,7 +44,7 @@ export default function Home() {
           >
             Chordio
           </Link>{" "}
-          and led development teams building critical systems in a Government
+          and led development teams building critical systems in a government
           organization.
         </p>
 
