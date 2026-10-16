@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { Button } from "@/components/ui/button";
+import { structuredData } from "@/lib/structured-data";
 import ChordioLogo from "@/public/chordio-logo.svg";
 import NovanaLogo from "@/public/novana-logo.png";
 import PragmaticanLogo from "@/public/pragmatican-logo.svg";
@@ -10,6 +11,11 @@ import PragmaticanLogo from "@/public/pragmatican-logo.svg";
 export default function Home() {
   return (
     <div className="min-h-[95dvh] bg-background flex items-start justify-start">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD, no user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <main className="max-w-xl mx-auto px-6 py-32">
         {/* Avatar and Name */}
         <div className="flex items-center gap-4 mb-4">
@@ -73,7 +79,7 @@ export default function Home() {
             <a
               href="https://github.com/ItayLisaey"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               aria-label="GitHub"
             >
               <svg
@@ -95,7 +101,7 @@ export default function Home() {
             <a
               href="https://linkedin.com/in/itaylisaey"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               aria-label="LinkedIn"
             >
               <svg
