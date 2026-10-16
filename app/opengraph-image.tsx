@@ -49,31 +49,8 @@ export default async function OpengraphImage() {
         </div>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 30,
-            color: "#555555",
-            lineHeight: 1.4,
-          }}
-        >
-          AI-native products, LLM systems, and the cloud behind them.
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <div
-            style={{
-              display: "flex",
-              width: "72px",
-              height: "6px",
-              borderRadius: "999px",
-              background: "#3b21b2",
-            }}
-          />
-          <div style={{ display: "flex", fontSize: 28, color: "#8a8a8a" }}>
-            itay.lisaey.com
-          </div>
-        </div>
+      <div style={{ display: "flex", fontSize: 28, color: "#8a8a8a" }}>
+        itay.lisaey.com
       </div>
     </div>,
     {
