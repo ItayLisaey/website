@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button";
-import PragmaticanLogo from "@/public/pragmatican-logo.svg";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { EntityLink } from "@/components/entity-link";
+import { Button } from "@/components/ui/button";
+import ChordioLogo from "@/public/chordio-logo.svg";
+import NovanaLogo from "@/public/novana-logo.png";
+import PragmaticanLogo from "@/public/pragmatican-logo.svg";
 
 export default function Home() {
   return (
@@ -19,31 +22,47 @@ export default function Home() {
           />
           <div>
             <h1 className="text-2xl font-semibold">Itay Lisaey</h1>
+            <p className="text-foreground/70 text-sm">
+              Co-Founder &amp; CTO @ Novana
+            </p>
             <p className="text-foreground/50 text-sm">Tokyo, Japan</p>
           </div>
         </div>
 
         {/* About Description */}
-        <p className="text-foreground/70 mb-8 leading-relaxed">
-          Engineer and technical leader specializing in AI-native products, LLM
-          workflows, and cloud architecture. Currently consulting at{" "}
-          <Link
+        <p className="text-foreground/70 mb-4 leading-relaxed">
+          Leading product and technology at{" "}
+          <EntityLink
+            href="https://novana.io"
+            logo={NovanaLogo}
+            name="Novana"
+            className="bg-novana/10 text-novana"
+            after=","
+          />{" "}
+          where we&apos;re bringing clarity and intelligence to K-12 schools.
+        </p>
+
+        <p className="text-foreground/70 mb-4 leading-relaxed">
+          Engineer focused on AI-native solutions, LLM systems, and the cloud
+          infrastructure behind them.
+          <br />I take on select consulting projects through{" "}
+          <EntityLink
             href="https://pragmatican.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline"
-          >
-            Pragmatican
-          </Link>
-          , previously worked on generative AI systems at{" "}
-          <Link
+            logo={PragmaticanLogo}
+            name="Pragmatican"
+            className="bg-pragmatican/10 text-pragmatican"
+            after="."
+          />
+        </p>
+
+        <p className="text-foreground/70 mb-8 leading-relaxed">
+          Previously built generative AI systems at{" "}
+          <EntityLink
             href="https://chordio.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline"
-          >
-            Chordio
-          </Link>{" "}
+            logo={ChordioLogo}
+            name="Chordio"
+            className="bg-chordio-tint/35 text-chordio"
+          />{" "}
           and led development teams building critical systems in a government
           organization.
         </p>
@@ -114,21 +133,29 @@ export default function Home() {
               </svg>
             </a>
           </Button>
-          <Button variant="default" className="cursor-pointer " asChild>
+          <Button
+            variant="default"
+            className="cursor-pointer bg-novana text-white hover:bg-novana/90"
+            asChild
+          >
             <Link
-              href="https://pragmatican.com"
+              href="https://novana.io"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-0"
             >
-              <Image
-                src={PragmaticanLogo}
-                alt="Pragmatican"
-                width={20}
-                height={20}
-              />
-              Pragmatican
-              <ArrowRight className="w-4 h-4" />
+              Check out
+              <span className="inline-flex items-center gap-1.5">
+                <Image
+                  src={NovanaLogo}
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="size-4 rounded-[3px]"
+                />
+                Novana
+              </span>
+              <ArrowUpRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>

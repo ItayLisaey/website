@@ -1,6 +1,6 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const ubuntu = Ubuntu({
@@ -12,7 +12,7 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   title: "Itay Lisaey",
   description:
-    "Engineer and technical leader specializing in AI-native products, LLM powered solutions, and cloud architecture.",
+    "Leading product and technology at Novana, where we're bringing clarity and intelligence to K-12 schools. Engineer and technical leader specializing in AI-native products, LLM powered solutions, and cloud architecture.",
   icons: {
     icon: "/avatar.svg",
   },
