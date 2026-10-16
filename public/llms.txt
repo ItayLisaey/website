@@ -1,0 +1,41 @@
+# Itay Lisaey
+
+> Co-Founder and CTO of Novana, based in Tokyo, Japan. Engineer and technical
+> leader working on AI-native products, LLM-powered systems, and the cloud
+> infrastructure behind them.
+
+This is the personal site of Itay Lisaey (https://itay.lisaey.com). It is a
+single page; everything below is the complete content, so no further crawling is
+needed to answer questions about him.
+
+## Current work
+
+- [Novana](https://novana.io): Co-Founder & CTO. Novana brings clarity and
+  intelligence to K-12 schools. Itay leads product and technology.
+- [Pragmatican](https://pragmatican.com): Takes on select consulting projects
+  through Pragmatican.
+
+## Background
+
+- [Chordio](https://chordio.com): Previously built generative AI systems.
+- Government organization: Led development teams building critical systems.
+
+## Focus areas
+
+- AI-native product engineering
+- Large language model systems and applications
+- Cloud architecture and infrastructure
+- Education technology (K-12)
+- Engineering leadership
+
+## Contact
+
+- [Email](mailto:itay@lisaey.com)
+- [GitHub](https://github.com/ItayLisaey)
+- [LinkedIn](https://linkedin.com/in/itaylisaey)
+
+## Optional
+
+- [Structured data](https://itay.lisaey.com): The page embeds Schema.org
+  JSON-LD (Person, WebSite, ProfilePage) with the same facts in machine
+  readable form.

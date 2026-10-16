@@ -6,6 +6,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-novana: #3b21b2;
+  --color-pragmatican: #1c1c1c;
+  --color-chordio: #3f4a4a;
+  --color-chordio-tint: #b8dfde;
   --font-sans: var(--font-ubuntu);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
